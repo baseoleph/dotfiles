@@ -12,7 +12,7 @@ Plug 'mattn/emmet-vim'
 Plug 'morhetz/gruvbox'
 
 " Python
-Plug 'klen/python-mode'	        " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
+"Plug 'klen/python-mode'	        " Python mode (docs, refactor, lints, highlighting, run and ipdb and more)
 "Plug 'davidhalter/jedi-vim' 		" Jedi-vim autocomplete plugin
 "Plug 'mitsuhiko/vim-jinja'		" Jinja support for vim
 "Plug 'mitsuhiko/vim-python-combined'

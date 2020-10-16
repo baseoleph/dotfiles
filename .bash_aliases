@@ -9,3 +9,25 @@ alias vim="nvim"
 
 alias p="python3"
 alias pp="pip3"
+
+# django
+alias runserver="p manage.py runserver"
+
+# add aliases
+alias addalias="nvim ~/.bash_aliases && source ./bashrc"
+
+# mkdir && cd
+mkcd ()
+{
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+# check and update
+alias aptupd="sudo apt update"
+alias aptupg="sudo apt upgrade"
+alias aptlis="sudo apt list --upgradable"
+alias aptins="sudo apt install"
+
+# flatpak apps
+alias telegram="flatpak run org.telegram.desktop"
+alias gitkraken="flatpak run com.axosoft.GitKraken"

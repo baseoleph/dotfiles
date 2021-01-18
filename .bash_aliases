@@ -14,7 +14,7 @@ alias pp="pip3"
 alias runserver="p manage.py runserver"
 
 # add aliases
-alias addalias="nvim ~/.bash_aliases && source ./bashrc"
+alias addalias="nvim ~/.bash_aliases && source ~/.bashrc"
 
 # mkdir && cd
 mkcd ()
@@ -31,3 +31,15 @@ alias aptins="sudo apt install"
 # flatpak apps
 alias telegram="flatpak run org.telegram.desktop"
 alias gitkraken="flatpak run com.axosoft.GitKraken"
+
+
+# compile and run program
+run ()
+{
+	g++ "$1" && ./a.out
+}
+
+trun ()
+{
+	g++ "$1" && time ./a.out
+}

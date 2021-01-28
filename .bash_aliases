@@ -43,3 +43,8 @@ trun ()
 {
 	g++ "$1" && time ./a.out
 }
+
+vrun()
+{
+	g++ "$1" && valgrind ./a.out
+}

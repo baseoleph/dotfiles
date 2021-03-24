@@ -36,15 +36,15 @@ alias gitkraken="flatpak run com.axosoft.GitKraken"
 # compile and run program
 run ()
 {
-	g++ -std=c++11 "$1" && ./a.out
+	g++ -o /tmp/.out -std=c++11 "$1" && /tmp/.out
 }
 
 trun ()
 {
-	g++ -std=c++11 "$1" && time ./a.out
+	g++ -o /tmp/.out -std=c++11 "$1" && time /tmp/.out
 }
 
 vrun()
 {
-	g++ -std=c++11 "$1" && valgrind ./a.out
+	g++ -o /tmp/.out -std=c++11 "$1" && valgrind /tmp/.out
 }

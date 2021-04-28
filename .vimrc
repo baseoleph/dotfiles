@@ -1,13 +1,13 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'jiangmiao/auto-pairs'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'jiangmiao/auto-pairs'
+" Plug 'ycm-core/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
-Plug 'kien/ctrlp.vim'
-Plug 'petRUShka/vim-sage'
+" Plug 'kien/ctrlp.vim'
+" Plug 'petRUShka/vim-sage'
 " html
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 " colorschemes
 Plug 'morhetz/gruvbox'
 
@@ -19,7 +19,7 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/default_extra/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/default_extra/.ycm_extra_conf.py'
 
 " mapping
 let mapleader=" "

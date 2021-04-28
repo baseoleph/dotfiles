@@ -5,7 +5,7 @@ alias logs="tail -f /var/log/syslog | ccze -A"
 alias diru="du -h --max-depth 1 ~ | sort -h"
 
 # nvim
-alias vim="nvim"
+# alias vim="nvim"
 
 alias p="python3"
 alias pp="pip3"
@@ -14,7 +14,7 @@ alias pp="pip3"
 alias runserver="p manage.py runserver"
 
 # add aliases
-alias addalias="nvim ~/.bash_aliases && source ~/.bashrc"
+alias addalias="vim ~/.bash_aliases && source ~/.bashrc"
 
 # mkdir && cd
 mkcd ()

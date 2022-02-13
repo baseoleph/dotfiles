@@ -124,3 +124,7 @@ fi
 if [ -f ~/.git-completion.bash ]; then
 	source ~/.git-completion.bash
 fi
+
+if [ -f ~/git/dotfiles/gitstatus/gitstatus.prompt.sh ]; then
+    source ~/git/dotfiles/gitstatus/gitstatus.prompt.sh
+fi 

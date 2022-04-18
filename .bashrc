@@ -128,3 +128,5 @@ fi
 if [ -f ~/git/dotfiles/gitstatus/gitstatus.prompt.sh ]; then
     source ~/git/dotfiles/gitstatus/gitstatus.prompt.sh
 fi 
+
+PS1='\[\033[01;36m\]\w\[\033[00m\]\n\[\033[1;32m\]\u\[\033[00m\] ${GITSTATUS_PROMPT}\n\$ '

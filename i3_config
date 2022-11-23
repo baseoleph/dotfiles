@@ -206,3 +206,6 @@ bar {
         status_command i3status
         position top
 }
+
+# Terminal to add trello task
+bindsym $mod+q exec alacritty; exec     "bash -c 'sleep 0.2s; i3-msg floating enable; i3-msg resize set 400px 400px; i3-msg move position 700px 330px'"

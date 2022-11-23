@@ -43,6 +43,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10% && $refresh_i3status
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-value=2434 set 10%- && $refresh_i3status
 
+# Layout switcher
+exec --no-startup-id $HOME/.xsessionrc
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

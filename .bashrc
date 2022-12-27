@@ -59,11 +59,12 @@ if [ -f $pt_dotfiles/gitstatus/gitstatus.prompt.sh ]; then
 	source $pt_dotfiles/gitstatus/gitstatus.prompt.sh
 fi
 
-if [ "$color_prompt" = yes ]; then
-	PS1='\[\033[01;36m\]\w\[\033[00m\]\n\[\033[1;32m\]\u\[\033[00m\] ${GITSTATUS_PROMPT}\n\$ '
-else
-	PS1='\[\033[01;36m\]\w\[\033[00m\]\n\[\033[1;32m\]\u\[\033[00m\] ${GITSTATUS_PROMPT}\n\$ '
-fi
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\] '           # green user@host
+PS1+='\[\033[01;34m\]\w\[\033[00m\]'              # blue current working directory
+PS1+='${GITSTATUS_PROMPT:+ $GITSTATUS_PROMPT}'    # git status (requires promptvars option)
+PS1+='\n\[\033[01;$((31+!$?))m\]\$\[\033[00m\] '  # green/red (success/error) $/# (normal/root)
+PS1+='\[\e]0;\u@\h: \w\a\]'                       # terminal title: user@host: dir
+
 unset color_prompt force_color_prompt
 
 # enable color support of ls and also add handy aliases
@@ -79,6 +80,17 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then

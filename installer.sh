@@ -10,6 +10,10 @@ ln_file() {
 }
 
 pt_dotfiles=$(dirname $(realpath $0))
+cd $pt_dotfiles
+
+git submodule update --init --recursive
+
 cd $HOME
 
 ln_file .bashrc
